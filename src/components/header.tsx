@@ -12,8 +12,12 @@ export default function Header() {
   const projectsPage = pathname === "/projects";
 
   return (
-    <header className="flex items-center justify-between py-3">
-      <h1 className="text-[2.5rem] font-bold">Larissa Oliveira</h1>
+    <header className="flex items-center justify-between py-4">
+      <div className="flex items-center">
+        <h1 className="text-[2.5rem] font-bold">Larissa Oliveira</h1>
+        <div className="w-[15rem] mt-1 h-[2px] -ml-[2px] bg-main" />
+      </div>
+
       <nav className="flex items-center gap-2 px-2 py-1 border-2 rounded-full">
         <Button
           asChild

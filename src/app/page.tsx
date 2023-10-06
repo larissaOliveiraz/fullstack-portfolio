@@ -11,10 +11,12 @@ import nodeIcon from "../../public/images/svg/nodejs-original.svg";
 import expressIcon from "../../public/images/svg/express-original.svg";
 import nestIcon from "../../public/images/svg/nestjs-original.svg";
 import springIcon from "../../public/images/svg/spring-original.svg";
+import postgresIcon from "../../public/images/svg/postgresql-original.svg";
+import mysqlIcon from "../../public/images/svg/mysql-original.svg";
 
 export default function Home() {
   return (
-    <main className="h-[calc(100%-5.25rem)] flex items-center justify-between pb-24">
+    <main className="h-[calc(100%-5.75rem)] flex items-center justify-between pb-12 mx-8">
       <div className="w-[30rem]">
         <Image src={homeTech} alt="" />
         <p className="flex justify-center w-full">
@@ -26,7 +28,7 @@ export default function Home() {
       </div>
 
       <div>
-        <h1 className="text-[2rem] font-semibold">Devenvolvimento Fullstack</h1>
+        <h1 className="text-[2rem] font-semibold">Fullstack Development</h1>
         <hr className="h-[2px] bg-main" />
         <div className="flex flex-col gap-5 mt-3">
           <div>
@@ -37,6 +39,7 @@ export default function Home() {
               <Image src={javaIcon} alt="" />
             </div>
           </div>
+
           <div>
             <p className="mb-1 text-xl">Front-end Stack</p>
             <div className="w-[3rem] flex gap-4">
@@ -45,6 +48,7 @@ export default function Home() {
               <Image src={tailwindIcon} alt="" />
             </div>
           </div>
+
           <div>
             <p className="mb-1 text-xl">Back-end Stack</p>
             <div className="w-[3rem] flex gap-4">
@@ -52,6 +56,8 @@ export default function Home() {
               <Image src={expressIcon} alt="" />
               <Image src={nestIcon} alt="" />
               <Image src={springIcon} alt="" />
+              <Image src={postgresIcon} alt="" />
+              <Image src={mysqlIcon} alt="" />
             </div>
           </div>
         </div>
