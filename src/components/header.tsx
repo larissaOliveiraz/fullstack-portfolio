@@ -19,7 +19,7 @@ export default function Header() {
           asChild
           variant={"ghost"}
           size={"sm"}
-          className={cn(homePage && "bg-slate-200")}
+          className={cn(homePage && "bg-main", "hover:opacity-90")}
         >
           <Link href="/" className="text-[1rem]">
             Home
@@ -30,7 +30,7 @@ export default function Header() {
           asChild
           variant={"ghost"}
           size={"sm"}
-          className={cn(projectsPage && "bg-slate-200")}
+          className={cn(projectsPage && "bg-main")}
         >
           <Link href="/projects" className="text-[1rem]">
             Projects
