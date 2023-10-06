@@ -5,6 +5,8 @@
 html,
 body,
 :root {
+  width: 85%;
+  margin: 0 auto;
   height: 100%;
 }
 
