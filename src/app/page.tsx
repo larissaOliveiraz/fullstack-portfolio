@@ -17,7 +17,7 @@ import mysqlIcon from "../../public/images/svg/mysql-original.svg";
 export default function Home() {
   return (
     <main className="h-[calc(100%-5.75rem)] flex items-center justify-between pb-12 mx-8">
-      <div className="w-[30rem]">
+      <section className="w-[30rem]">
         <Image src={homeTech} alt="" />
         <p className="flex justify-center w-full">
           <a href="https://www.freepik.com/free-vector/innovation-concept-illustration_13717657.htm#query=technology%20illustration&position=0&from_view=keyword&track=ais">
@@ -25,9 +25,9 @@ export default function Home() {
           </a>
           on Freepik
         </p>
-      </div>
+      </section>
 
-      <div>
+      <section>
         <h1 className="text-[2rem] font-semibold">Fullstack Development</h1>
         <hr className="h-[2px] bg-main" />
         <div className="flex flex-col gap-5 mt-3">
@@ -61,7 +61,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
   );
 }
