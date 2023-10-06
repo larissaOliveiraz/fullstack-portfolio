@@ -17,6 +17,12 @@ export default function Home() {
     <main className="h-[calc(100%-5.25rem)] flex items-center justify-between pb-24">
       <div className="w-[30rem]">
         <Image src={homeTech} alt="" />
+        <p className="flex justify-center w-full">
+          <a href="https://www.freepik.com/free-vector/innovation-concept-illustration_13717657.htm#query=technology%20illustration&position=0&from_view=keyword&track=ais">
+            Image by storyset
+          </a>
+          on Freepik
+        </p>
       </div>
 
       <div>
