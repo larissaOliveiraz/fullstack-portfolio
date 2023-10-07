@@ -40,6 +40,7 @@ export const projects: Project[] = [
       {
         id: "1",
         endpoint: "/me",
+        category: "user",
         verb: "GET",
         auth: true,
         description: [],
@@ -50,6 +51,55 @@ export const projects: Project[] = [
             { field: "name", value: "Jane" },
             { field: "email", value: "jane@example.com" },
             { field: "created_at", value: "2023-10-02T19:32:24.432Z" },
+          ],
+        },
+      },
+      {
+        id: "2",
+        endpoint: "/users",
+        category: "user",
+        verb: "POST",
+        auth: false,
+        description: [],
+        request: {
+          type: "BODY",
+          body: [
+            { field: "name", value: "Jane", required: true },
+            { field: "email", value: "jane@example.com", required: true },
+            { field: "password", value: "123", required: true },
+          ],
+        },
+        response: {
+          status: "201",
+          body: [
+            { field: "id", value: "cdb6c0e0-ba35-44c4-ab32-0f4342d9d3f7" },
+            { field: "name", value: "Jane" },
+            { field: "email", value: "jane@example.com" },
+            { field: "created_at", value: "2023-10-02T19:32:24.432Z" },
+          ],
+        },
+      },
+      {
+        id: "2",
+        endpoint: "/gyms",
+        category: "gym",
+        verb: "POST",
+        auth: false,
+        description: [],
+        request: {
+          type: "BODY",
+          body: [
+            { field: "name", value: "Fit Gym", required: true },
+            { field: "latitude", value: "-3126516", required: true },
+            { field: "longitude", value: "-5648165", required: true },
+          ],
+        },
+        response: {
+          status: "201",
+          body: [
+            { field: "name", value: "Fit Gym" },
+            { field: "latitude", value: "-3126516" },
+            { field: "longitude", value: "-5648165" },
           ],
         },
       },

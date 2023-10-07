@@ -11,9 +11,10 @@ export type Project = {
   resources: ResourceType[];
 };
 
-type ResourceType = {
+export type ResourceType = {
   id: string;
   endpoint: string;
+  category: string;
   verb: "GET" | "POST" | "PUT" | "DELETE";
   auth: boolean;
   description: string[];

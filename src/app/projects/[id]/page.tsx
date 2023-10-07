@@ -1,5 +1,8 @@
+import ResourceAccordion from "@/components/resource-accordion";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/db/projects";
+import { separateResourceByCategory } from "@/utils/separate-resource-by-category";
+import { randomInt, randomUUID } from "crypto";
 import React from "react";
 
 type ProjectType = {
@@ -10,6 +13,7 @@ type ProjectType = {
 
 export default function Project({ params }: ProjectType) {
   const [project] = projects.filter((item) => item.id === params.id);
+  const organizedResources = separateResourceByCategory(project.resources);
 
   return (
     <div className="mt-5 w-[80%] m-auto">
@@ -44,13 +48,30 @@ export default function Project({ params }: ProjectType) {
         <p className="text-[1rem] mt-2">{project.introduction}</p>
       </div>
 
-      <div className="flex flex-col mt-10">
+      <div className="mt-10">
         <h2 className="text-[1.75rem] font-semibold mb-2">Features</h2>
         {project.features.map((feature) => (
           <p key={feature} className="text-[1rem] flex items-center gap-2">
-            <div className="w-[5px] h-[5px] rounded-full bg-main" /> {feature}
+            <span className="w-[5px] h-[5px] rounded-full bg-main" /> {feature}
           </p>
         ))}
+      </div>
+
+      <div className="mt-10">
+        <h2 className="text-[1.75rem] font-semibold mb-2">Endpoints</h2>
+        <div className="flex flex-col gap-2">
+          {organizedResources.map((resource) => (
+            <div key={randomUUID()} className="flex flex-col gap-2 mb-4">
+              <div className="flex items-center gap-2">
+                <span className="w-[5px] h-[5px] rounded-full bg-main" />
+                <h2 className="capitalize text-[1.25rem]">{resource.key}</h2>
+              </div>
+              {resource.value.map((item) => (
+                <ResourceAccordion key={item.id} resource={item} />
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
