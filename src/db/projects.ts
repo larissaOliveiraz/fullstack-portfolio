@@ -3,6 +3,7 @@ import { Project } from "@/types/project";
 export const projects: Project[] = [
   {
     id: 1,
+    type: "BACK",
     title: "Gympass Fast",
     badge: ["API", "Fastify", "Typescript", "Node.js"],
     stack: [
@@ -39,6 +40,7 @@ export const projects: Project[] = [
         endpoint: "/me",
         verb: "GET",
         auth: true,
+        description: [],
         response: {
           status: "200",
           body: [
@@ -50,7 +52,5 @@ export const projects: Project[] = [
         },
       },
     ],
-    bg: "#a1d1ae",
-    color: "#1c1c1c",
   },
 ];

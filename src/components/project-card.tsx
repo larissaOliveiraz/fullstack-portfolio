@@ -1,22 +1,20 @@
+"use client";
 import { Project } from "@/types/project";
 import { Badge } from "./ui/badge";
-import { cn } from "@/lib/utils";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 type ProjectCardType = {
   project: Project;
 };
 
 export default function ProjectCard({ project }: ProjectCardType) {
-  const custom = {
-    bg: `bg-[${project.bg}]`,
-    color: `text-[${project.color}]`,
-  };
+  const router = useRouter();
 
   return (
     <div
-      style={{ backgroundColor: project.bg, color: project.color }}
-      className="max-w-xs p-4 rounded-lg"
+      className="max-w-[20rem] p-4 transition-all border-2 rounded-2xl hover:scale-105"
+      onClick={() => router.push(`/projects/${project.id}`)}
     >
       <div className="mb-4">
         <Image

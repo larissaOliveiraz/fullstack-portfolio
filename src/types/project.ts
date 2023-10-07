@@ -1,5 +1,6 @@
 export type Project = {
   id: number;
+  type: "BACK" | "FRONT";
   title: string;
   badge: string[];
   stack: string[];
@@ -8,14 +9,13 @@ export type Project = {
   introduction: string;
   features: string[];
   resources: ResourceType[];
-  bg: string;
-  color: "#1c1c1c" | "#e2e2e2";
 };
 
 type ResourceType = {
   endpoint: string;
   verb: "GET" | "POST" | "PUT" | "DELETE";
   auth: boolean;
+  description: string[];
   request?: Request;
   response?: Response;
 };
