@@ -2,12 +2,14 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
+    id: 1,
     title: "Gympass Fast",
+    badge: ["API", "Fastify", "Typescript", "Node.js"],
     stack: [
       "Typescript",
-      "Javascript",
       "Node.js",
       "Fastify",
+      "Javascript",
       "PostgreSQL",
       "Prisma",
       "Vitest",
@@ -21,6 +23,7 @@ export const projects: Project[] = [
       "Unit Test",
       "E2E Test",
     ],
+    image: "/gympass.jpg",
     introduction: "This API project allows the user to use gym-passes.",
     features: [
       "Sign-up and sign-in to the application.",
@@ -36,7 +39,6 @@ export const projects: Project[] = [
         endpoint: "/me",
         verb: "GET",
         auth: true,
-        image: "",
         response: {
           status: "200",
           body: [
@@ -48,5 +50,7 @@ export const projects: Project[] = [
         },
       },
     ],
+    bg: "#a1d1ae",
+    color: "#1c1c1c",
   },
 ];
