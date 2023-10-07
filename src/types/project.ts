@@ -1,5 +1,5 @@
 export type Project = {
-  id: number;
+  id: string;
   type: "BACK" | "FRONT";
   title: string;
   badge: string[];
@@ -12,6 +12,7 @@ export type Project = {
 };
 
 type ResourceType = {
+  id: string;
   endpoint: string;
   verb: "GET" | "POST" | "PUT" | "DELETE";
   auth: boolean;

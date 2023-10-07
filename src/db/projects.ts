@@ -2,7 +2,7 @@ import { Project } from "@/types/project";
 
 export const projects: Project[] = [
   {
-    id: 1,
+    id: "1",
     type: "BACK",
     title: "Gympass Fast",
     badge: ["API", "Fastify", "Typescript", "Node.js"],
@@ -25,7 +25,8 @@ export const projects: Project[] = [
       "E2E Test",
     ],
     image: "/gympass.jpg",
-    introduction: "This API project allows the user to use gym-passes.",
+    introduction:
+      "Essa API se baseia nas funcionalidades do benefício comporativo 'gympass'. Ela oferece a possibilidade de acessar academias próximas ao usuário por meio de passes de entrada.",
     features: [
       "Sign-up and sign-in to the application.",
       "Access personal account details. (Authenticated)",
@@ -37,6 +38,7 @@ export const projects: Project[] = [
     ],
     resources: [
       {
+        id: "1",
         endpoint: "/me",
         verb: "GET",
         auth: true,
