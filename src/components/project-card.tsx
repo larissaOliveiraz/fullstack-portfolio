@@ -13,7 +13,7 @@ export default function ProjectCard({ project }: ProjectCardType) {
 
   return (
     <div
-      className="max-w-[20rem] p-4 transition-all border-2 rounded-2xl hover:scale-105"
+      className="max-w-[20rem] p-4 transition-all border-2 rounded-2xl cursor-pointer hover:scale-105"
       onClick={() => router.push(`/projects/${project.id}`)}
     >
       <div className="mb-4">

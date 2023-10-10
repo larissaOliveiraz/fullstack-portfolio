@@ -9,6 +9,8 @@ export type Project = {
   introduction: string;
   features: string[];
   resources: ResourceType[];
+  github: string;
+  site?: string[];
 };
 
 export type ResourceType = {

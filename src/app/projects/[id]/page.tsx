@@ -1,8 +1,10 @@
+import Bullet from "@/components/bullet";
 import ResourceAccordion from "@/components/resource-accordion";
 import { Badge } from "@/components/ui/badge";
 import { projects } from "@/db/projects";
 import { separateResourceByCategory } from "@/utils/separate-resource-by-category";
 import { randomInt, randomUUID } from "crypto";
+import Link from "next/link";
 import React from "react";
 
 type ProjectType = {
@@ -16,7 +18,7 @@ export default function Project({ params }: ProjectType) {
   const organizedResources = separateResourceByCategory(project.resources);
 
   return (
-    <div className="mt-5 w-[80%] m-auto">
+    <div className="mt-5 w-[80%] m-auto mb-[5rem]">
       <h1 className="text-[2.5rem] font-bold flex justify-center">
         {project.title}
       </h1>
@@ -44,6 +46,16 @@ export default function Project({ params }: ProjectType) {
       </div>
 
       <div className="flex flex-col mt-10">
+        <h2 className="text-[1.75rem] font-semibold">Links</h2>
+        <Link
+          href={project.github}
+          className="text-[1rem] mt-2 flex items-center gap-2 hover:underline"
+        >
+          <Bullet /> Repositório no Github
+        </Link>
+      </div>
+
+      <div className="flex flex-col mt-10">
         <h2 className="text-[1.75rem] font-semibold">Introdução</h2>
         <p className="text-[1rem] mt-2">{project.introduction}</p>
       </div>
@@ -52,7 +64,7 @@ export default function Project({ params }: ProjectType) {
         <h2 className="text-[1.75rem] font-semibold mb-2">Features</h2>
         {project.features.map((feature) => (
           <p key={feature} className="text-[1rem] flex items-center gap-2">
-            <span className="w-[5px] h-[5px] rounded-full bg-main" /> {feature}
+            <Bullet /> {feature}
           </p>
         ))}
       </div>
@@ -63,7 +75,7 @@ export default function Project({ params }: ProjectType) {
           {organizedResources.map((resource) => (
             <div key={randomUUID()} className="flex flex-col gap-2 mb-4">
               <div className="flex items-center gap-2">
-                <span className="w-[5px] h-[5px] rounded-full bg-main" />
+                <Bullet />
                 <h2 className="capitalize text-[1.25rem]">{resource.key}</h2>
               </div>
               {resource.value.map((item) => (
