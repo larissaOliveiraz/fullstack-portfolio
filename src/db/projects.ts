@@ -29,13 +29,13 @@ export const projects: Project[] = [
     introduction:
       "Essa API se baseia nas funcionalidades do benefício comporativo 'gympass'. Ela oferece a possibilidade de acessar academias próximas ao usuário por meio de passes de entrada.",
     features: [
-      "Sign-up and sign-in to the application.",
-      "Access personal account details. (Authenticated)",
-      "Check-in to a gym. (Authenticated)",
-      "Validate check-in. (Authenticated)",
-      "Access personal check-in count and history. (Authenticated)",
-      "Register a new gym.",
-      "Search gyms near you or by name. (Authenticated)",
+      "Sign-up e sign-in do usuário na aplicação.",
+      "Acessar informações do perfil do usuário. (Autenticado)",
+      "Realizar check-in em uma academia. (Autenticado)",
+      "Validar o check-in realizado. (Autenticado)",
+      "Acessar o histórico e a contagem de check-ins realizados pelo usuário. (Autenticado)",
+      "Cadastrar uma nova academia. (Autenticado)",
+      "Pesquisar academias pelo nome ou pela proximidade. (Autenticado)",
     ],
     resources: [
       {
