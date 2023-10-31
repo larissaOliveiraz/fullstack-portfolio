@@ -77,7 +77,9 @@ export default function ResourceAccordion({ resource }: ResourceAccordionType) {
 
               {resource.response && (
                 <div>
-                  <h3 className="font-semibold text-[1rem] mb-1">Response</h3>
+                  <h3 className="font-semibold text-[1rem] mb-1">
+                    Response - {resource.response.status}
+                  </h3>
                   <div
                     className={`${codeFont.className} bg-slate-900 text-gray-300 p-4 rounded-lg`}
                   >

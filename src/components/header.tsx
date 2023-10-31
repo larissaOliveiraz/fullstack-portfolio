@@ -12,7 +12,7 @@ export default function Header() {
   const projectsPage = pathname.includes("/projects");
 
   return (
-    <header className="flex items-center justify-between py-4">
+    <header className="flex items-center justify-between py-4 mb-5">
       <div className="flex items-center">
         <h1 className="text-[2rem] font-bold">Larissa Oliveira</h1>
         {/* <div className="w-[15rem] mt-1 h-[2px] -ml-[2px] bg-main" /> */}
